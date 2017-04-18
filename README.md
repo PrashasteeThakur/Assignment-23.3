@@ -6,10 +6,12 @@ Ans.
 UI
 • The user interface for users to submit queries and other operations to the system.
 For example, command line interface and a web based GUI.
+
 Driver
 • The component which receives the queries.
 • This component implements the notion of session handles and provides execute and
 fetch APIs modelled on JDBC/ODBC interfaces.
+
 Compiler
 • The component that parses the query, does semantic analysis on the different query
 blocks and query expressions and eventually generates an execution plan with the help
@@ -20,6 +22,7 @@ Metastore
 partitions in the warehouse including column and column type information, the serializers
 and deserializers necessary to read and write data and the corresponding HDFS files
 where the data is stored.
+
 Execution Engine
 • The component which executes the execution plan created by the compiler. The plan is a
 DAG of stages. The execution engine manages the dependencies between these different
